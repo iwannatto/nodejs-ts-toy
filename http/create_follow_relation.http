@@ -1,0 +1,8 @@
+POST http://localhost:5000/follow_relations/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "followee_id": 1,
+    "follower_id": 3,
+    "hoge": "fuga"
+}
