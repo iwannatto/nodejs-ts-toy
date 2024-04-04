@@ -5,6 +5,6 @@ WORKDIR /usr/app
 COPY ./ /usr/app/
 RUN npm install
 
-RUN mysql.server start &
+RUN mysql -d
 
 RUN npm run dev:watch
