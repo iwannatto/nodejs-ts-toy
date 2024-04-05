@@ -1,7 +1,7 @@
 # 概要
 Node.js + Express + TypeScriptを用いたXライクなtoy application  
 JSON APIのみ  
-製作期間：4日  
+製作期間：5日(16.5時間)  
 
 # できること
 各`http/*.http`ファイルを参照。  
