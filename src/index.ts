@@ -21,7 +21,10 @@ const app: express.Express = express();
 //         models: [User, FollowRelations, Post],
 //     }
 // );
-const sequelize = new Sequelize(process.env.MYSQL_URI);
+const sequelize = new Sequelize(
+    process.env.MYSQL_URI,
+    {models: [User, FollowRelations, Post]},
+);
 
 const asyncFunc = async(): Promise<void> => {
     try {
