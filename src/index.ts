@@ -1,4 +1,5 @@
 import express from 'express';
+const { Sequelize } = require('sequelize-typescript');
 import 'dotenv/config';
 
 import { User } from './models/user';
@@ -11,18 +12,20 @@ import postController from './controllers/posts';
 
 const app: express.Express = express();
 
-const { Sequelize } = require('sequelize-typescript');
-const sequelize = new Sequelize(
-    'nodejs_ts_toy',
-    process.env.MYSQL_USER,
-    process.env.MYSQL_PASSWORD,
-    {
-        dialect: 'mysql',
-        models: [User, FollowRelations, Post],
-    }
-);
+// const sequelize = new Sequelize(
+//     process.env.DATABASE,
+//     process.env.MYSQL_USER,
+//     process.env.MYSQL_PASSWORD,
+//     {
+//         dialect: 'mysql',
+//         models: [User, FollowRelations, Post],
+//     }
+// );
+const sequelize = new Sequelize(process.env.MYSQL_URI);
+
 const asyncFunc = async(): Promise<void> => {
     try {
+        await sequelize.sync();
         await sequelize.authenticate();
         console.log("success");
     } catch (error) {
