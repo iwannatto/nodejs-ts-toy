@@ -15,4 +15,4 @@ https://nodejs-ts-toy-1.onrender.com
 
 # できてないことの中でやりたいこと
 * 各種エラー処理
-* OAuth認証
+* 何らかの認証
