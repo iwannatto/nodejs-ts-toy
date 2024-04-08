@@ -6,7 +6,7 @@ JSON APIのみ
 # できること
 各`http/*.http`ファイルを参照。  
 各`http/*.http`ファイルはVSCodeのREST Client拡張機能を使うことでAPIを叩けるようになっている。  
-各ファイルのURLはローカルで動かすことを想定している。このアプリケーションをローカルで動かす場合、index.tsのコメント部分を入れ替え、`npm run dev:watch`で動作させる。  
+各ファイルのURLはローカルで動かすことを想定している。このアプリケーションをローカルで動かす場合、index.tsのコメント部分を入れ替え、Node.jsが入った環境にて`npm install`した後`npm run dev:watch`で動作させる。  
   
 follow_relationは同じものを複数作れないようにしている。  
 
